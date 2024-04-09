@@ -10,7 +10,11 @@ COPY . /app
 # Install the application dependencies
 RUN pip install -r requirements.txt
 
+# Defina as variáveis de ambiente necessárias para o Flask
+ENV FLASK_APP=hello.py
+ENV FLASK_RUN_HOST=0.0.0.0
+
 EXPOSE 8000
 
 # Define the entry point for the container
-CMD ["flask --app", "hello", "run", "0.0.0.0:8000"]
+CMD ["flask", "run"]
