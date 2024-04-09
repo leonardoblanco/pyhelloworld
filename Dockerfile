@@ -13,6 +13,7 @@ RUN pip install -r requirements.txt
 # Defina as variáveis de ambiente necessárias para o Flask
 ENV FLASK_APP=hello.py
 ENV FLASK_RUN_HOST=0.0.0.0
+ENV FLASK_RUN_PORT=8000
 
 EXPOSE 8000
 
